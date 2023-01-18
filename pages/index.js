@@ -58,7 +58,7 @@ export default function Home() {
     handleHabitat();
   }
   const handleSearch = async () => {
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/`);
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/?limit=200&offset=0`);
     const data = await res.json();
     
     const filteredPokemon = data.results.filter((pokemon) => {
@@ -82,13 +82,13 @@ export default function Home() {
           </Head>
           <Navbar />
           <div className="p-2">
-            <div className=" flex-col mt-4 p-3 items-center">
-              <div className="flex gap-2 items-center">
+            <div className="  md:flex mt-4 p-3 items-center">
+              <div className="flex gap-2 w-screen items-center">
               <input
                 type="text"
                 name=""
                 id=""
-                className="rounded-md border-b-2 p-2 w-[100%] md:w-[80%] focus:none"
+                className="rounded-md border-b-2 p-2 w-[100%]  focus:outline-none"
                 placeholder="Enter the name of the pokemon"
                 
                 onChange={(e) => {
@@ -106,7 +106,7 @@ export default function Home() {
               <AiOutlineSearch onClick={handleSearch} className="h-7 cursor-pointer w-10" />
               </div>
 
-             <div className="flex pt-4 justify-between">
+             <div className="flex pt-4 justify-between items-center">
              <select
                 className=""
                 id="Gender"

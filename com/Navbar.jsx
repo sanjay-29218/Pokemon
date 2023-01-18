@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 const Navbar = () => {
   const router = useRouter()
   return (
-    <div className='p-5 sticky top-0 shadow-lg bg-slate-100 flex gap-10 items-center  '>
+    <div className='p-5  sticky top-0 shadow-lg bg-slate-100 flex gap-10 items-center  '>
      <div>
       {router.pathname !== '/' && <Link href={'/'}><ArrowBackIcon/></Link>}
      </div>

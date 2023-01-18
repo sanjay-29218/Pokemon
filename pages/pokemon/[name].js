@@ -79,7 +79,6 @@ const PokemonScreen = ({ name }) => {
       return flavor.language.name === "en";
     });
     setBio(englishFlavorText[0]?.flavor_text);
-
   };
 
   useEffect(() => {
@@ -134,42 +133,42 @@ const PokemonScreen = ({ name }) => {
                 <h1>Bio</h1>
                 <hr />
                 <table>
-                 <tbody>
-                 <tr>
-                    <td className="pr-[5rem] font-semibold">Genus</td>
-                    <td>
-                      {" "}
-                      {species &&
-                        species.map((genus, i) => (
+                  <tbody>
+                    <tr>
+                      <td className="pr-[5rem] font-semibold">Genus</td>
+                      <td>
+                        {" "}
+                        {species &&
+                          species.map((genus, i) => (
+                            <li className="list-none " key={i}>
+                              {genus.genus}
+                            </li>
+                          ))}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="pr-[5rem] font-semibold">Height</td>
+                      <td>{pokemon.height}</td>
+                    </tr>
+                    <tr>
+                      <td className="pr-[5rem] font-semibold">Weight</td>
+                      <td>{pokemon.weight}</td>
+                    </tr>
+                    <tr>
+                      <td className="pr-[5rem] font-semibold">Abilities</td>
+                      <td>
+                        {pokemon.abilities.map((ability, i) => (
                           <li className="list-none " key={i}>
-                            {genus.genus}
+                            {ability.ability.name}
                           </li>
                         ))}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="pr-[5rem] font-semibold">Height</td>
-                    <td>{pokemon.height}</td>
-                  </tr>
-                  <tr>
-                    <td className="pr-[5rem] font-semibold">Weight</td>
-                    <td>{pokemon.weight}</td>
-                  </tr>
-                  <tr>
-                    <td className="pr-[5rem] font-semibold">Abilities</td>
-                    <td>
-                      {pokemon.abilities.map((ability, i) => (
-                        <li className="list-none " key={i}>
-                          {ability.ability.name}
-                        </li>
-                      ))}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                 </tbody>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
 
@@ -179,57 +178,57 @@ const PokemonScreen = ({ name }) => {
                 <h1 className="font-bold  ">Stats</h1>
                 <hr />
                 <table>
-                 <tbody>
-                 <tr>
-                    <td className="font-bold pr-5">HP</td>
+                  <tbody>
+                    <tr>
+                      <td className="font-bold pr-5">HP</td>
 
-                    <td className="">
-                      <LinearProgress
-                        className="w-[10rem]"
-                        variant="determinate"
-                        value={pokemon.stats[0].base_stat}
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="font-bold pr-5">Attack</td>
-                    <td>
-                      <LinearProgress
-                        variant="determinate"
-                        value={pokemon.stats[1].base_stat}
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="font-bold pr-5">Defense</td>
-                    <td>
-                      <LinearProgress
-                        variant="determinate"
-                        value={pokemon.stats[2].base_stat}
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="font-bold pr-5">Special Attack</td>
-                    <td>
-                      <LinearProgress
-                        variant="determinate"
-                        value={pokemon.stats[3].base_stat}
-                      />
-                    </td>
-                  </tr>
+                      <td className="">
+                        <LinearProgress
+                          className="w-[10rem]"
+                          variant="determinate"
+                          value={pokemon.stats[0].base_stat}
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="font-bold pr-5">Attack</td>
+                      <td>
+                        <LinearProgress
+                          variant="determinate"
+                          value={pokemon.stats[1].base_stat}
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="font-bold pr-5">Defense</td>
+                      <td>
+                        <LinearProgress
+                          variant="determinate"
+                          value={pokemon.stats[2].base_stat}
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="font-bold pr-5">Special Attack</td>
+                      <td>
+                        <LinearProgress
+                          variant="determinate"
+                          value={pokemon.stats[3].base_stat}
+                        />
+                      </td>
+                    </tr>
 
-                  <tr>
-                    <td className="font-bold ">Abilities:</td>
-                    <td>
-                      {/* {pokemon.abilities.map((ability, i) => (
+                    <tr>
+                      <td className="font-bold ">Abilities:</td>
+                      <td>
+                        {/* {pokemon.abilities.map((ability, i) => (
                         <li className="list-none " key={i}>
                           {ability.ability.name}
                         </li>
                       ))} */}
-                    </td>
-                  </tr>
-                 </tbody>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
               <div>
@@ -282,46 +281,46 @@ const PokemonScreen = ({ name }) => {
                 <div className="flex justify-center gap-6 items-center"></div>
                 <div className="  ">
                   <table>
-                   <tbody>
-                   <tr>
-                      <td className="font-bold pr-5">HP</td>
+                    <tbody>
+                      <tr>
+                        <td className="font-bold pr-5">HP</td>
 
-                      <td className="">
-                        <LinearProgress
-                          className="w-[10rem]"
-                          variant="determinate"
-                          value={pokemon.stats[0].base_stat}
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="font-bold pr-5">Attack</td>
-                      <td>
-                        <LinearProgress
-                          variant="determinate"
-                          value={pokemon.stats[1].base_stat}
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="font-bold pr-5">Defense</td>
-                      <td>
-                        <LinearProgress
-                          variant="determinate"
-                          value={pokemon.stats[2].base_stat}
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="font-bold pr-5">Special Attack</td>
-                      <td>
-                        <LinearProgress
-                          variant="determinate"
-                          value={pokemon.stats[3].base_stat}
-                        />
-                      </td>
-                    </tr>
-                   </tbody>
+                        <td className="">
+                          <LinearProgress
+                            className="w-[10rem]"
+                            variant="determinate"
+                            value={pokemon.stats[0].base_stat}
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="font-bold pr-5">Attack</td>
+                        <td>
+                          <LinearProgress
+                            variant="determinate"
+                            value={pokemon.stats[1].base_stat}
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="font-bold pr-5">Defense</td>
+                        <td>
+                          <LinearProgress
+                            variant="determinate"
+                            value={pokemon.stats[2].base_stat}
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="font-bold pr-5">Special Attack</td>
+                        <td>
+                          <LinearProgress
+                            variant="determinate"
+                            value={pokemon.stats[3].base_stat}
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
@@ -331,7 +330,7 @@ const PokemonScreen = ({ name }) => {
                   <div className="font-bold">W: {pokemon.weight / 10}KG</div>
                   {types.map((type, i) => (
                     <div
-                    key={i}
+                      key={i}
                       style={{
                         backgroundColor:
                           colorslice.getInitialState()[`${types[0]}`],
@@ -342,7 +341,6 @@ const PokemonScreen = ({ name }) => {
                         } 100%)`,
                       }}
                       className={`${types[i]} rounded-full w-4 h-4`}
-                      
                     ></div>
                   ))}
                   <div className="font-bold">H: {pokemon.height / 10}M</div>
@@ -350,36 +348,36 @@ const PokemonScreen = ({ name }) => {
                 </div>
                 <div className="  ">
                   <table>
-                   <tbody>
-                   <tr>
-                      <td className="pr-[5rem] font-semibold">Abilities</td>
-                      <td>
-                        {pokemon.abilities.map((ability, i) => (
-                          <li  className="list-none " key={i}>
-                            {ability.ability.name}
-                          </li>
-                        ))}
-                      </td>
-                    </tr>
-                   </tbody>
+                    <tbody>
+                      <tr>
+                        <td className="pr-[5rem] font-semibold">Abilities</td>
+                        <td>
+                          {pokemon.abilities.map((ability, i) => (
+                            <li className="list-none " key={i}>
+                              {ability.ability.name}
+                            </li>
+                          ))}
+                        </td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
                 <table>
-                <tbody>
-                <tr>
-                    <td className="font-semibold pr-[3rem] ">Moves</td>
-                    <td>
-                      <ul>
-                        {pokemon &&
-                          pokemon.moves.slice(0, 3).map((move, i) => (
-                            <li className="list-none" key={i}>
-                              {move.move.name}
-                            </li>
-                          ))}
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
+                  <tbody>
+                    <tr>
+                      <td className="font-semibold pr-[3rem] ">Moves</td>
+                      <td>
+                        <ul>
+                          {pokemon &&
+                            pokemon.moves.slice(0, 3).map((move, i) => (
+                              <li className="list-none" key={i}>
+                                {move.move.name}
+                              </li>
+                            ))}
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
                 <div></div>
               </div>
@@ -395,12 +393,8 @@ const PokemonScreen = ({ name }) => {
               </div>
             )}
             {/* footer */}
-            <div className="fixed bottom-0">
-              <BottomNavigation
-                sx={{ width: 400 }}
-                value={value}
-                onChange={handleChange}
-              >
+            <div className="fixed bottom-0 w-full">
+              <BottomNavigation sx={{}} value={value} onChange={handleChange}>
                 <BottomNavigationAction
                   label="Info"
                   value="info"
