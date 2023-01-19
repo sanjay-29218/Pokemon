@@ -89,8 +89,8 @@ export default function Home() {
         {pokemons ? (
           <div>
             <div className="p-2">
-              <div className="  md:flex mt-4 p-3 items-center">
-                <div className="flex gap-2 md:w-[80%] w-[100%] items-center">
+              <div className="  md:flex justify-center mt-4 p-3 items-center">
+                <div className="flex gap-2 md:w-[80%] w-[100%] justify-center items-center">
                   <input
                     type="text"
                     name=""
