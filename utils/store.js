@@ -15,7 +15,7 @@ initialState:{
     grass:'#E2F9E1',
     water:'#E0F1FD',
     dark:'#FBE3DF',
-    flying:'#FBE3DF',
+    flying:'#FBE3D',
     psychic:'#FBE3DF',
     ice:'#FBE3DF',
     dragon:'#FBE3DF',

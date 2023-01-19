@@ -64,7 +64,7 @@ export default function Home() {
   }
   const handleSearch = async () => {
     const res = await fetch(
-      `https://pokeapi.co/api/v2/pokemon-species/?limit=200&offset=20`
+      `https://pokeapi.co/api/v2/pokemon-species/?limit=200&`
     );
     const data = await res.json();
 
