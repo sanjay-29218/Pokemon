@@ -419,9 +419,9 @@ const PokemonScreen = ({ name }) => {
           <div className="md:flex gap-2 items-center w-[70%] p-5 ">
             {/* For variant="text", adjust the height via font-size */}
             
-            <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
             {/* For other variants, adjust the size with `width` and `height` */}
             <Skeleton className="" variant="rectangular" width={210} height={300} />
+            <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
             <Skeleton className="hidden md:block" variant="rectangular" width={510} height={300} />
             <div>
               <div className="flex">
