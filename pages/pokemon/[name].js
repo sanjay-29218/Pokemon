@@ -416,16 +416,17 @@ const PokemonScreen = ({ name }) => {
         </div>
       ) : (
         <div className="flex h-screen justify-center items-center">
-          <div className="flex gap-2 items-center w-[70%] p-5 ">
+          <div className="md:flex gap-2 items-center w-[70%] p-5 ">
             {/* For variant="text", adjust the height via font-size */}
+            
             <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
             {/* For other variants, adjust the size with `width` and `height` */}
-            <Skeleton variant="rectangular" width={210} height={300} />
-            <Skeleton variant="rectangular" width={510} height={300} />
+            <Skeleton className="" variant="rectangular" width={210} height={300} />
+            <Skeleton className="hidden md:block" variant="rectangular" width={510} height={300} />
             <div>
               <div className="flex">
-                <Skeleton variant="circular" width={80} height={80} />
-                <Skeleton variant="circular" width={80} height={80} />
+                <Skeleton className="hidden md:block" variant="circular" width={80} height={80} />
+                <Skeleton className="hidden md:block" variant="circular" width={80} height={80} />
               </div>
             </div>
           </div>
